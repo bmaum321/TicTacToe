@@ -5,11 +5,13 @@ import androidx.lifecycle.viewModelScope
 import com.brian.tictactoe.data.GameState
 import com.brian.tictactoe.data.MakeTurn
 import com.brian.tictactoe.data.RealTimeMessagingClient
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.net.ConnectException
 import javax.inject.Inject
 
+@HiltViewModel
 class TicTacToeViewModel @Inject constructor(
     private val client: RealTimeMessagingClient
 ): ViewModel() {
